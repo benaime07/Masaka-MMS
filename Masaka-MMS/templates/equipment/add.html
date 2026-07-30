@@ -1,0 +1,36 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<h2>Add New Machine</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label>Machine ID</label>
+        <input type="text" name="machine_id" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Machine Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Department</label>
+        <input type="text" name="department" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Status</label>
+        <select name="status" class="form-control">
+            <option>Active</option>
+            <option>Under Maintenance</option>
+            <option>Inactive</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Serial Number</label>
+        <input type="text" name="serial_number" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Notes</label>
+        <textarea name="notes" class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Save Machine</button>
+    <a href="/equipment" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
